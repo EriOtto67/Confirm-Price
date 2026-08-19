@@ -1,0 +1,19 @@
+async function sendGasPrice() {
+  try {
+
+    await liff.sendMessages([
+      {
+        type: "text",
+        text: "<<ガソリン価格"
+      }
+    ]);
+
+    liff.closeWindow();
+
+  } catch (error) {
+
+    console.error(error);
+    alert("送信に失敗しました");
+
+  }
+}
