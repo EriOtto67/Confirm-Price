@@ -1,19 +1,21 @@
-async function sendGasPrice() {
-  try {
+<button id="sendButton">
+  ガソリン価格を確認する
+</button>
 
+<script>
+document.getElementById("sendButton").addEventListener("click", async () => {
+  try {
     await liff.sendMessages([
       {
         type: "text",
-        text: "<<ガソリン価格"
+        text: ">>ガソリン価格"
       }
     ]);
 
     liff.closeWindow();
 
   } catch (error) {
-
     console.error(error);
-    alert("送信に失敗しました");
-
   }
-}
+});
+</script>
